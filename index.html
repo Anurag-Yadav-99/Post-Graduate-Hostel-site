@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Graduate Men's Hostel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #663399; /* Violet */
+            --secondary-color: #8a2be2; /* Deep Purple */
+            --text-color: #333;
+            --light-bg: #f8f5ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }   
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .sublogo {
+            color: #f0f0f0;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        .logo1 {
+        position: relative;  /* Positioning it relative to the first positioned parent */
+        top: 0;              /* Align to the top */
+        right: 0;            /* Align to the right */
+        color: #f0f0f0;      /* Lighter text color (light gray) */
+        font-size: 1.5rem;   /* Font size */
+        font-weight: lighter;   /* Bold font */
+        padding: 10px;       /* Add some padding for spacing */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://lh5.googleusercontent.com/p/AF1QipN84SNw4HsTSOlL6cB_pZq5yA9E5E-Lg33-3XFh=w408-h544-k-no');
+            background-size: contain;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c41830;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .about-news-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .about-content {
+        background: white;
+        padding: 5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .about-content p {
+    font-size: 18px; /* Adjust the size to your preference */
+    line-height: 1.6; /* Optional: Adjust line height for readability */
+    }
+
+        .news-section {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .news-item {
+        padding: 1rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .news-item:last-child {
+        border-bottom: none;
+    }
+
+    .news-date {
+        color: var(--primary-color);
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .news-title {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+    }
+
+    .news-description {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .news-link {
+        display: inline-block;
+        color: var(--primary-color);
+        text-decoration: none;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .news-link:hover {
+        text-decoration: underline;
+    }
+
+    .messages-section {
+    background: #f8f5ff;
+    padding: 5rem 2rem;
+}
+
+.messages-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.messages-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.message-slide {
+    display: none;
+    animation: fadeEffect 1s;
+    text-align: center;
+    padding: 1rem;
+}
+
+.message-slide.active {
+    display: block;
+}
+
+.authority-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    object-fit: cover;
+}
+
+.authority-name {
+    color: #663399;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.authority-title {
+    color: #8a2be2;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.message-content {
+    color: #444;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.slider-nav {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #663399;
+    width: 24px;
+    border-radius: 6px;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #663399;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #8a2be2;
+}
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.7;}
+    to {opacity: 1;}
+}
+
+@media (max-width: 768px) {
+    .prev-btn, .next-btn {
+        display: none;
+    }
+    
+    .messages-container {
+        margin: 0 1rem;
+    }
+}
+
+    @media (max-width: 768px) {
+        .about-news-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+        .university-logo {
+            width: 400px;
+            height: 150px;
+            margin-bottom: 2rem;
+        }
+
+        .authorities {
+            padding: 5rem 2rem;
+            background-color: white;
+        }
+
+        .authorities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .authority-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .authority-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .authority-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .authority-card p {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .authority-contact {
+            margin-top: 1rem;
+        }
+
+        .authority-contact a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .authority-contact i {
+            margin-right: 0.5rem;
+        }
+
+        /* Admission Section */
+        .admission {
+            padding: 5rem 2rem;
+            position: relative;
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm2HnMiZGx10OD2y5Y_cGLXAP1_WXcW8ZDGeB5pD6BZdk-qs78N-zKq9_CVCX2Vlk5sRQ&usqp=CAU') center/cover;
+            color: var(--text-color);
+        }
+
+        .admission-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .admission-steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .admission-steps li {
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .admission-steps li:before {
+            content: "→";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Facilities Section */
+        .facilities {
+            padding: 5rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .facility-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .facility-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Mess Section */
+        .mess {
+            padding: 5rem 2rem;
+        }
+
+        .mess-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mess-schedule {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .mess-schedule table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .mess-schedule th, .mess-schedule td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .mess-schedule th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-info, .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #1e2161;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="https://assets.zollege.in/public/college_data/images/logos/1491817267UniversityofDelhi.png" alt="DU Logo" class="logo-image">
+                <div class="logo-text">
+                    <div class="logo">Post Graduate Men's Hostel</div>
+                    <div class="sublogo">University Of Delhi</div>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#admission">Admission</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#mess">Mess</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="slide active">
+            <!-- Slide 1 background is set in CSS -->
+        </div>
+        <div class="slide">
+            <!-- Slide 2 background is set in CSS -->
+        </div>
+        <div class="slide">
+            <!-- Slide 3 background is set in CSS -->
+        </div>
+        <div class="hero-content">
+            <h1>Post Graduate Men's Hostel</h1>
+            <p>Fostering Academic Excellence and Community Living</p>
+            <a href="#admission" class="cta-button">Apply for Admission</a>
+        </div>
+        <div class="slide-nav">
+            <button class="slide-nav-btn active"></button>
+            <button class="slide-nav-btn"></button>
+            <button class="slide-nav-btn"></button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>About Our Hostel</h2>
+        </div>
+        <div class="about-news-container">
+            <div class="about-content">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4L2Z974LLkDsbuxtt_6fp9z9Kk_Wx60IkEg&s" alt="University of Delhi Logo" class="university-logo">
+                <p>P.G.Men's Hostel was inaugurated by Professor R.C.Mehrotra, the then Vice-Chancellor on 24.10.1975 with one hundred single bedded rooms. During the last few years, it has not only grown in times of physical assets such as a library with a capacity of sixty seats, a computer lab, all are air-conditioned and working for twenty hours a day, a decent modern gym, a laundry room with five washing machines, solar water geysers, a newspaper room, a magazine room, a small canteen, a photocopy outlet, two badminton courts, but also in respect of intellectual property and human resource...</p>
+            </div>
+            
+            <div class="news-section">
+                <h3>Latest Updates</h3>
+                <div class="news-item">
+                    <div class="news-date">October 20, 2024</div>
+                    <div class="news-title">Hostel Admission 2024-25</div>
+                    <div class="news-description">Applications are now open for the academic year 2024-25. Last date to apply is November 15, 2024.</div>
+                    <a href="#admission" class="news-link">Read More →</a>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-date">October 18, 2024</div>
+                    <div class="news-title">Cultural Festival Announcement</div>
+                    <div class="news-description">Annual cultural festival 'Resonance 2024' will be held from December 1-3, 2024.</div>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-date">October 15, 2024</div>
+                    <div class="news-title">New Gym Equipment</div>
+                    <div class="news-description">The hostel gym has been upgraded with new equipment including treadmills and weight machines.</div>
+                    <a href="#facilities" class="news-link">Read More →</a>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-date">October 10, 2024</div>
+                    <div class="news-title">WiFi Infrastructure Update</div>
+                    <div class="news-description">Hostel WiFi system upgraded to provide faster internet speeds across all blocks.</div>
+                    <a href="#facilities" class="news-link">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="authorities" class="authorities">
+        <div class="section-title">
+            <h2>Hostel Authorities</h2>
+        </div>
+        <div class="authorities-grid">
+            <div class="authority-card">
+                <img src="https://dlis.du.ac.in/userfiles/images/Faculty/kps1.jpg" alt="Provost">
+                <h3>Prof. K.P. Singh </h3>
+                <p>Provost</p>
+                <p>Professor, Department of Library and Information Science</p>
+                <div class="authority-contact">
+                    
+                    <a href="kpsingh330@gmail.com"><i class="fas fa-envelope"></i>kpsingh330@gmail.com</a>
+                </div>
+            </div>
+            <div class="authority-card">
+                <img src="https://i.ytimg.com/vi/oHrHGOXpkJQ/maxresdefault.jpg" alt="Warden">
+                <h3>Prof. Mushtaq A. Qadri</h3>
+                <p>Warden</p>
+                <p>Professor, Department Of Urdu</p>
+                <div class="authority-contact">
+                    
+                    <a href="drmushtaqqadri@gmail.com"><i class="fas fa-envelope"></i>drmushtaqqadri@gmail.com</a>
+                </div>
+            </div>
+            <div class="authority-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb_-55K3-WgbawsxYl5z3pFdV4DDUt20YSCg&s" alt="Resident Tutor">
+                <h3>Dr. Narender Kumar Bishnoi</h3>
+                <p>Resident Tutor</p>
+                <p>Assistant Professor, Department of Law</p>
+                <div class="authority-contact">
+                    
+                    <a href=" nkbishnoi@clc.du.ac.in"><i class="fas fa-envelope"></i>nkbishnoi@clc.du.ac.in</a>
+                </div>
+            </div>
+
+            <div class="authority-card">
+                
+                <h3>Mr. Ramesh Kumar</h3>
+                <p>Section Officer</p>
+                <p></p>
+                <div class="authority-contact">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="messages-section">
+        <h2 style="text-align: center; color: #663399; font-size: 2rem; margin-bottom: 3rem;">Messages from Authorities</h2>
+        
+        <div class="messages-slider">
+            <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+            <button class="next-btn" onclick="changeSlide(1)">❯</button>
+            
+            <div class="messages-container">
+                <div class="message-slide active">
+                    <img src="https://dlis.du.ac.in/userfiles/images/Faculty/kps1.jpg" alt="Prof. K.P. Singh" class="authority-image">
+                    <h3 class="authority-name">Prof. K.P. Singh</h3>
+                    <p class="authority-title">Provost</p>
+                    <p class="message-content">Welcome to PG Men's Hostel! Our mission is to provide a conducive environment for academic excellence while fostering a sense of community. We strive to maintain high standards of discipline, cleanliness, and mutual respect among our residents.</p>
+                </div>
+                
+                <div class="message-slide">
+                    <img src="https://i.ytimg.com/vi/oHrHGOXpkJQ/maxresdefault.jpg" alt="Prof. Mushtaq A. Qadri" class="authority-image">
+                    <h3 class="authority-name">Prof. Mushtaq A. Qadri</h3>
+                    <p class="authority-title">Warden</p>
+                    <p class="message-content">As your warden, I am committed to ensuring your comfort and safety. Our hostel provides various facilities and opportunities for both academic and personal growth. Feel free to approach me with any concerns.</p>
+                </div>
+                
+                <div class="message-slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb_-55K3-WgbawsxYl5z3pFdV4DDUt20YSCg&s" alt="Dr. Narender Kumar Bishnoi" class="authority-image">
+                    <h3 class="authority-name">Dr. Narender Kumar Bishnoi</h3>
+                    <p class="authority-title">Resident Tutor</p>
+                    <p class="message-content">Our hostel is not just a place to stay, but a home away from home. We organize various academic and cultural activities throughout the year to enhance your university experience and promote holistic development.</p>
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Section -->
+    <section id="admission" class="admission">
+        <div class="section-title">
+            <h2>Admission Process</h2>
+        </div>
+        <div class="admission-content">
+            <ul class="admission-steps">
+                <li>Students must be enrolled in a full-time course at Delhi University</li>
+                <li>Fill out the online application form during the admission period</li>
+                <li>Submit required documents including college admission letter, residence proof, and income certificate</li>
+                <li>Merit-based selection process considering academic performance and distance from hometown</li>
+                <li>Selected candidates must complete fee payment within specified timeline</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="facilities">
+        <div class="section-title">
+            <h2>Our Facilities</h2>
+        </div>
+        <div class="facilities-grid">
+            <div class="facility-card">
+                
+                <div class="facility-content">
+                    <i class="fas fa-book"></i>
+                    <h3>Reading Room</h3>
+                    <p>24/7 air-conditioned study space with modern amenities</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                
+                <div class="facility-content">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Wi-Fi & Computer Lab</h3>
+                    <p>High-speed internet access and modern computer facilities</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                
+                <div class="facility-content">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Gym</h3>
+                    <p>Well-equipped fitness center with trained instructors</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                
+                <div class="facility-content">
+                    <i class="fas fa-first-aid"></i>
+                    <h3>Medical Room</h3>
+                    <p>24/7 medical assistance with qualified staff</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                
+                <div class="facility-content">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Sports</h3>
+                    <p>Multiple indoor & outdoor sports facilities</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                
+                <div class="facility-content">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Security</h3>
+                    <p>24/7 security personnel and CCTV surveillance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mess Section -->
+    <section id="mess" class="mess">
+        <div class="section-title">
+            <h2>Mess Facilities</h2>
+        </div>
+        <div class="mess-content">
+            <div class="mess-schedule">
+                <h3>Mess Timings</h3>
+                <table>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Timing</th>
+                    </tr>
+                    <tr>
+                        <td>Breakfast</td>
+                        <td>8:00 AM - 9:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Lunch</td>
+                        <td>1:00 PM - 2:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Evening Tea</td>
+                        <td>5:00 PM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Dinner</td>
+                        <td>8:00 PM - 9:00 PM</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+   
+   
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> North Campus, University of Delhi</p>
+                <!--<p><i class="fas fa-phone"></i> 011 27666752</p> -->
+                <p><i class="fas fa-envelope"></i> pgmenshosteloffice@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Office Hours: 9:00 AM - 5:00 PM (Mon-Fri)</p>
+
+                
+                <div class="location-container">
+                    <h3>Our Location</h3>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.4663342677656!2d77.20661631508454!3d28.68821698239654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd8d1d656f25%3A0x84e5e11b58da4638!2sP.G.%20Men&#39;s%20Hostel%2C%20University%20of%20Delhi!5e0!3m2!1sen!2sin!4v1645560529845!5m2!1sen!2sin"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy;
+
+
+
+            <script>
+                let slideIndex = 1;
+                let slideInterval;
+                
+                showSlides(slideIndex);
+                startAutoSlide();
+                
+                function startAutoSlide() {
+                    slideInterval = setInterval(() => {
+                        changeSlide(1);
+                    }, 5000);
+                }
+                
+                function changeSlide(n) {
+                    clearInterval(slideInterval);
+                    showSlides(slideIndex += n);
+                    startAutoSlide();
+                }
+                
+                function currentSlide(n) {
+                    clearInterval(slideInterval);
+                    showSlides(slideIndex = n);
+                    startAutoSlide();
+                }
+                
+                function showSlides(n) {
+                    const slides = document.getElementsByClassName("message-slide");
+                    const dots = document.getElementsByClassName("dot");
+                    
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].classList.remove("active");
+                        dots[i].classList.remove("active");
+                    }
+                    
+                    slides[slideIndex-1].classList.add("active");
+                    dots[slideIndex-1].classList.add("active");
+                }
+                </script>
+
+           
